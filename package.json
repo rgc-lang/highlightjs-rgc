@@ -1,0 +1,42 @@
+{
+  "name": "highlightjs-rgc",
+  "version": "0.1.0",
+  "description": "highlight.js grammar for the RGC programming language",
+  "type": "module",
+  "main": "dist/rgc.cjs",
+  "module": "dist/rgc.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/rgc.es.js",
+      "require": "./dist/rgc.cjs"
+    }
+  },
+  "files": ["src", "dist"],
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "test-markup": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rgc-lang/highlightjs-rgc.git"
+  },
+  "keywords": ["highlight.js", "highlightjs", "rgc", "syntax"],
+  "author": "rgc-lang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rgc-lang/highlightjs-rgc/issues"
+  },
+  "homepage": "https://github.com/rgc-lang/highlightjs-rgc",
+  "peerDependencies": {
+    "highlight.js": "^11.11.0"
+  },
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "highlight.js": "^11.11.1",
+    "mocha": "^11.2.2",
+    "rollup": "^4.0.2",
+    "should": "^13.2.3"
+  }
+}

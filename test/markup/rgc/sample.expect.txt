@@ -1,0 +1,15 @@
+<span class="hljs-keyword">def</span> fib(n: <span class="hljs-type">int</span>) <span class="hljs-operator">-&gt;</span> <span class="hljs-type">int</span>:
+    <span class="hljs-keyword">if</span> n <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> n
+    <span class="hljs-keyword">return</span> fib(n <span class="hljs-operator">-</span> <span class="hljs-number">1</span>) <span class="hljs-operator">+</span> fib(n <span class="hljs-operator">-</span> <span class="hljs-number">2</span>)
+
+<span class="hljs-keyword">class</span> Counter:
+    value: <span class="hljs-type">int</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">def</span> increment(<span class="hljs-built_in">self</span>) <span class="hljs-operator">-&gt;</span> <span class="hljs-literal">None</span>:
+        <span class="hljs-built_in">self</span>.value <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>
+
+counter: Counter <span class="hljs-operator">=</span> <span class="hljs-meta">@var</span> Counter()
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
+    counter.increment()
+<span class="hljs-built_in">print</span>(counter.value)
